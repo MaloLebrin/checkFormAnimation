@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button {
+    width: 200px;
+    height: 50px;
+    background: none;
+    border: 3px solid #0ab1ba;
+    border-radius: 100px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 500ms;
+}
+button:hover {
+    font-size: 14px;
+}
+button:focus {
+    outline: none;
+    border: 2px solid transparent;
+    width: 50px;
+    border-left: 2px solid #0ab1ba;
+    border-bottom: 2px solid #0ab1ba;
+    animation: spin 2s 500ms forwards;
+}
+button:focus span {
+    color: transparent;
+}
+button:focus svg {
+    animation: check 500ms 2300ms forwards;
+}
+span,
+svg {
+    position: absolute;
+    color: #0ab1ba;
+    fill: transparent;
+    font-size: 20px;
+}
+@keyframes spin {
+    80% {
+        border: 2px solid transparent;
+        border-left: 2px solid #0ab1ba;
+    }
+    100% {
+        transform: rotate(1080deg);
+        border: 2px solid #0ab1ba;
+    }
+}
+@keyframes check {
+    to {
+        fill: #0ab1ba;
+    }
+}
+@keyframes circle {
+    to {
+        border: 2px solid #0ab1ba;
+    }
+}
